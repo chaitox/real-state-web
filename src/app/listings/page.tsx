@@ -1,23 +1,12 @@
 import { Footer } from "@/components/ui/footer";
 import { PropertyCard } from "@/components/ui/property-card";
-import Link from "next/link";
 
 export default function ListingsPage() {
     return (
         <>
             <main className="max-w-[1440px] mx-auto px-6 py-8">
                 {/* Breadcrumbs */}
-                <div className="flex items-center gap-2 mb-6">
-                    <Link href="/" className="text-gray-500 text-sm hover:text-primary">
-                        Inicio
-                    </Link>
-                    <span className="material-symbols-outlined text-gray-300 text-sm">
-                        chevron_right
-                    </span>
-                    <span className="text-gray-900 dark:text-white text-sm font-bold">
-                        Listado de Propiedades
-                    </span>
-                </div>
+                {/* Breadcrumbs Removed as per feedback */}
 
                 {/* Page Heading */}
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
@@ -25,21 +14,21 @@ export default function ListingsPage() {
                         <h1 className="text-4xl font-extrabold tracking-tight mb-2">
                             Propiedades en Paraguay
                         </h1>
-                        <p className="text-gray-500 dark:text-gray-400">
+                        <p className="text-gray-500">
                             Encuentre las mejores oportunidades en tierras agrícolas, ganaderas
                             y residenciales.
                         </p>
                     </div>
                     <div className="flex gap-3">
-                        <button className="flex items-center gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer">
+                        <button className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer">
                             <span className="material-symbols-outlined text-sm">sort</span>
                             Ordenar: Más recientes
                         </button>
-                        <div className="flex border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                            <button className="px-3 py-2 bg-gray-100 dark:bg-gray-700 text-primary cursor-pointer">
+                        <div className="flex border border-gray-200 rounded-lg overflow-hidden">
+                            <button className="px-3 py-2 bg-gray-100 text-primary cursor-pointer">
                                 <span className="material-symbols-outlined">grid_view</span>
                             </button>
-                            <button className="px-3 py-2 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer">
+                            <button className="px-3 py-2 bg-white hover:bg-gray-50 cursor-pointer">
                                 <span className="material-symbols-outlined">view_list</span>
                             </button>
                         </div>
@@ -49,7 +38,7 @@ export default function ListingsPage() {
                 <div className="flex flex-col lg:flex-row gap-10">
                     {/* Sidebar Filters */}
                     <aside className="w-full lg:w-72 shrink-0">
-                        <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 sticky top-28">
+                        <div className="bg-white p-6 rounded-xl border border-gray-200 sticky top-28">
                             <div className="flex items-center justify-between mb-6">
                                 <h2 className="text-lg font-bold">Filtros</h2>
                                 <button className="text-xs font-bold text-primary underline cursor-pointer">
@@ -65,7 +54,7 @@ export default function ListingsPage() {
                                         </span>
                                         Tipo de Propiedad
                                     </label>
-                                    <select className="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg text-sm outline-none px-3 py-2">
+                                    <select className="w-full bg-gray-50 border-gray-200 rounded-lg text-sm outline-none px-3 py-2">
                                         <option>Todos</option>
                                         <option>Campo</option>
                                         <option>Quinta</option>
@@ -116,12 +105,12 @@ export default function ListingsPage() {
                                     </label>
                                     <div className="flex gap-2">
                                         <input
-                                            className="w-1/2 bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg text-sm p-2 outline-none"
+                                            className="w-1/2 bg-gray-50 border-gray-200 rounded-lg text-sm p-2 outline-none"
                                             placeholder="Min"
                                             type="text"
                                         />
                                         <input
-                                            className="w-1/2 bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg text-sm p-2 outline-none"
+                                            className="w-1/2 bg-gray-50 border-gray-200 rounded-lg text-sm p-2 outline-none"
                                             placeholder="Max"
                                             type="text"
                                         />
@@ -139,7 +128,7 @@ export default function ListingsPage() {
                                         <button className="py-2 text-xs font-bold border border-primary bg-primary/10 rounded-lg cursor-pointer">
                                             Hectáreas
                                         </button>
-                                        <button className="py-2 text-xs font-bold border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer">
+                                        <button className="py-2 text-xs font-bold border border-gray-200 rounded-lg cursor-pointer">
                                             Metros²
                                         </button>
                                     </div>
@@ -152,7 +141,7 @@ export default function ListingsPage() {
                                         </span>
                                         Zona / Departamento
                                     </label>
-                                    <select className="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg text-sm outline-none px-3 py-2">
+                                    <select className="w-full bg-gray-50 border-gray-200 rounded-lg text-sm outline-none px-3 py-2">
                                         <option>Todas las zonas</option>
                                         <option>Central</option>
                                         <option>Chaco</option>
@@ -257,23 +246,23 @@ export default function ListingsPage() {
 
                         {/* Pagination */}
                         <div className="flex items-center justify-center gap-3 mt-12">
-                            <button className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 transition-colors cursor-pointer">
+                            <button className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
                                 <span className="material-symbols-outlined">chevron_left</span>
                             </button>
                             <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold cursor-pointer">
                                 1
                             </button>
-                            <button className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 transition-colors cursor-pointer">
+                            <button className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
                                 2
                             </button>
-                            <button className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 transition-colors cursor-pointer">
+                            <button className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
                                 3
                             </button>
                             <span className="text-gray-400">...</span>
-                            <button className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 transition-colors cursor-pointer">
+                            <button className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
                                 8
                             </button>
-                            <button className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 transition-colors cursor-pointer">
+                            <button className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
                                 <span className="material-symbols-outlined">chevron_right</span>
                             </button>
                         </div>
